@@ -51,19 +51,20 @@ class CardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-                setGradientBackground(view: smallContainerView, colors: colors)
-                setGradientBackground(view: userImageVIew, colors: colors)
-                setGradientBackground(view: containerViewForGradient, colors: colors1)
-        
-                tableView.delegate = self
-                tableView.dataSource = self
-                tableView.register(LastTransactionsTableViewCell.nib(), forCellReuseIdentifier: LastTransactionsTableViewCell.id)
-                tableView.separatorStyle = .none
-        
+setUI()
+             
     }
 
+    func setUI() {
+        setGradientBackground(view: smallContainerView, colors: colors)
+        setGradientBackground(view: userImageVIew, colors: colors)
+        setGradientBackground(view: containerViewForGradient, colors: colors1)
 
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(LastTransactionsTableViewCell.nib(), forCellReuseIdentifier: LastTransactionsTableViewCell.id)
+        tableView.separatorStyle = .none
+    }
   
 
 }
